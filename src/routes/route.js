@@ -4,7 +4,7 @@ const router = express.Router();
 const UserController= require("../controllers/userController")
 const BookController= require("../controllers/bookController")
 const commonMW = require ("../middlewares/commonMiddlewares")
-
+const apiController= require("../controllers/apiController")
 router.get("/test-me", function (req, res) {
     res.send("My first ever api!")
 })
@@ -13,6 +13,17 @@ router.get("/test-me", function (req, res) {
 
 
 router.post("/createBook", BookController.createBook  )
+
+router.get("/CreateAPI",apiController.createAPI)
+
+router.get("/CreateAPI2",apiController.createAPI2)
+
+router.get("/CreateAPI3",apiController.createAPI3)
+
+router.get("/CreateAPI4",apiController.createAPI4)
+
+router.get("/CreateAPI5",apiController.createAPI5)
+
 
 
 
